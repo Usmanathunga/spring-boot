@@ -10,12 +10,16 @@ import com.example.entityMapping.service.CheesePizza;
 import com.example.entityMapping.value.ValueAnnotationDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class EntityMappingApplication {
 
 	public static void main(String[] args) {
-		var context = SpringApplication.run(EntityMappingApplication.class, args);// return application context object
+//		var context = SpringApplication.run(EntityMappingApplication.class, args);// return application context object
+		ConfigurableApplicationContext context = SpringApplication.run(EntityMappingApplication.class, args);// return application context object
+
 //		PizzaController pizzaController = context.getBean(PizzaController.class);
 //		PizzaController pizzaController = (PizzaController) context.getBean("pizzaDemo");//casting
 //		PizzaController pizzaController = (PizzaController) context.getBean("pizzaController");//casting
@@ -57,12 +61,12 @@ public class EntityMappingApplication {
 //		System.out.println(valueAnnotationDemo.getHomeDir());
 //		System.out.println(valueAnnotationDemo.getJavaHome());
 
-		PropertysourceDemo propertysourceDemo = context.getBean(PropertysourceDemo.class);
-		System.out.println(propertysourceDemo.getEmail());
-		System.out.println(propertysourceDemo.getHost());
-		System.out.println(propertysourceDemo.getPassword());
-		System.out.println(propertysourceDemo.getDesc());
-		System.out.println(propertysourceDemo.getName());
+//		PropertysourceDemo propertysourceDemo = context.getBean(PropertysourceDemo.class);
+//		System.out.println(propertysourceDemo.getEmail());
+//		System.out.println(propertysourceDemo.getHost());
+//		System.out.println(propertysourceDemo.getPassword());
+//		System.out.println(propertysourceDemo.getDesc());
+//		System.out.println(propertysourceDemo.getName());
 
 
 
